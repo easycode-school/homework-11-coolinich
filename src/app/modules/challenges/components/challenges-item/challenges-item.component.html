@@ -14,7 +14,7 @@
         <i class="material-icons">schedule</i>
         <span>COMMING SOON</span>
       </div>
-      <div *ngIf="challengeItem.is_active || challengeItem.is_closed" class="d-flex flex-column"> 
+      <div *ngIf="challengeItem.is_active || challengeItem.is_closed" class="d-flex flex-column text-lowercase"> 
         <span class="votes-amount">{{ challengeItem.votes | formatAmount }}</span>
         <span>VOTES</span>
       </div>
