@@ -9,7 +9,12 @@ import { UserProfileFollowsComponent } from './components/user-profile-follows/u
 import { MatCardModule, MatButtonModule } from '@angular/material';
 
 @NgModule({
-  declarations: [UserProfileComponent, UserProfileImagesComponent, UserProfileFavouritesComponent, UserProfileFollowsComponent],
+  declarations: [
+    UserProfileComponent,
+    UserProfileImagesComponent,
+    UserProfileFavouritesComponent,
+    UserProfileFollowsComponent,
+  ],
   imports: [
     CommonModule,
     UserRoutingModule,

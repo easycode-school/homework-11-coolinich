@@ -26,7 +26,6 @@
 .tab-nav a.active {
     border-bottom: 2px solid purple;
     color: purple;
-    /* background-color: lightgrey; */
 }
 
 .user-info {

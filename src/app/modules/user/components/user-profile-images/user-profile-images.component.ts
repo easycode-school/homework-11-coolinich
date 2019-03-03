@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../../services/user.service';
 import { Image } from '../../interfaces/image';
@@ -11,6 +11,7 @@ import { ImagesList } from '../../interfaces/image';
   styleUrls: ['./user-profile-images.component.css']
 })
 export class UserProfileImagesComponent implements OnInit {
+  @Input() authUserId: string;
   public image: ImagesList;
   constructor(
     private activeRoute: ActivatedRoute,
@@ -18,7 +19,7 @@ export class UserProfileImagesComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    const id = this.activeRoute.snapshot.params['id'];
+    const id = this.activeRoute.snapshot.params.id;
     this.userService.getUserImages(id).subscribe((data: ImagesList) => {
       this.image = data;
     });

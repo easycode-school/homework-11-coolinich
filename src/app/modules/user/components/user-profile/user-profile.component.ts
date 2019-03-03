@@ -11,19 +11,21 @@ import { AuthGlobalService } from 'src/app/services/auth-global.service';
 })
 export class UserProfileComponent implements OnInit {
   public user: User;
-  public activeUser: string;
+  public authUserId: string;
+  public userProfileId: string;
   public activeTab = 'selfies';
   constructor(
     private activeRoute: ActivatedRoute,
     private userService: UserService,
     private auth: AuthGlobalService
   ) {
-    this.activeUser = this.auth.getUserId;
+    // this.authUserId = this.auth.getUserId;
   }
 
   ngOnInit() {
-    const id = this.activeRoute.snapshot.params['id'];
-    this.userService.getUserInfo(id).subscribe((data: User) => {
+    this.authUserId = this.auth.getUserId;
+    this.userProfileId = this.activeRoute.snapshot.params.id;
+    this.userService.getUserInfo(this.userProfileId).subscribe((data: User) => {
       this.user = data;
     });
   }

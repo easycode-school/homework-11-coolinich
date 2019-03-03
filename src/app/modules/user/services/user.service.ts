@@ -10,7 +10,7 @@ export class UserService {
   private apiUrl: string = environment.apiUrl;
 
   constructor(
-    private http: HttpClient,
+    private http: HttpClient
   ) { }
 
   public getUserInfo(id: string): Observable<User> {

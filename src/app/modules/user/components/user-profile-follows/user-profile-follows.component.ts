@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-profile-follows.component.css']
 })
 export class UserProfileFollowsComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
